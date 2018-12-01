@@ -257,8 +257,7 @@ class certificate():
                 type='CT'
             else:
                 type='PT'
-            print(os._exists(os.path.join(os.getcwd(),self.content[i][1]+type+str(j)+'.docx')))
-            while(os._exists(self.content[i][1]+type+str(j)+'.docx')==True):
+            while(os.path.exists(self.content[i][1]+type+str(j)+'.docx')==True):
                 j+=1
             self.tpl.save(self.content[i][1]+type+str(j)+'.docx')
 
