@@ -1,11 +1,14 @@
 import xlrd
 from docxtpl import DocxTemplate
 import random
+import os
 class certificate():
     file = './info.xls'
     tpl = 0
     content=[]
     def read_info(self):
+        print("1")
+        os.getwd()
         workbook = xlrd.open_workbook(self.file)
         sheet = workbook.sheet_by_index(0)
         for i in range(0,sheet.nrows):
